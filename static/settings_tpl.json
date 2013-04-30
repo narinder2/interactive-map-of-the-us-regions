@@ -1,0 +1,74 @@
+{
+    "st1": {
+   	 	"id": 1,
+		"name": "New England",
+		"shortname": "NE",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st2": {
+    	"id": 2,
+		"name": "Middle Atlantic",
+		"shortname": "MA ",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st3": {
+		"id": 3,
+		"name": "South Atlantic",
+		"shortname": "SA ",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st4":{
+    	"id": 4,
+		"name": "East South Central",
+		"shortname": "ESC",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st5":{
+    	"id": 5,
+		"name": "East North Central",
+		"shortname": "ENC",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st6":{
+    	"id": 6,
+		"name": "West South Central",
+		"shortname": "WSC",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st7":{
+    	"id": 7,
+		"name": "West North Central",
+		"shortname": "WNC",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st8":{
+    	"id": 8,
+		"name": "Mountain",
+		"shortname": "M",
+		"link": "",
+		"comment": "",
+		"image": ""
+	},
+    "st9":{
+    	"id": 9,
+		"name": "Pacific",
+		"shortname": "P",
+		"link": "",
+		"comment": "",
+		"image": ""
+	}
+}
