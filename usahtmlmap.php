@@ -82,7 +82,7 @@ add_filter('the_content', 'free_usa_map_plugin_content', 10);
 
 function free_usa_map_plugin_content($content) {
 
-    $dir = WP_PLUGIN_URL.'/freeusahtmlmap/static/';
+    $dir = WP_PLUGIN_URL.'/interactive-map-of-the-us-regions/static/';
     $siteURL = get_site_url();
 
     $fontSize = get_option('freeusahtml5map_nameFontSize', '11');
