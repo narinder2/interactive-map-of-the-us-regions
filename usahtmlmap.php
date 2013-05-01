@@ -65,6 +65,8 @@ function free_usa_map_plugin_scripts(){
         wp_enqueue_script('tiny_mce');
         wp_register_script('jquery-tipsy', plugins_url('/static/js/jquery.tipsy.js', __FILE__));
         wp_enqueue_script('jquery-tipsy');
+        wp_enqueue_style('thickbox');
+        wp_enqueue_script('thickbox');
 
     }
     else {

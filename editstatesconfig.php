@@ -134,6 +134,10 @@ echo "<h2>" . __( 'Configuration of Map Areas', 'freeusa-html5-map' ) . "</h2>";
         }
 
     });
+
+    function clearImage(f) {
+        jQuery(f).prev().val('');
+    }
 </script>
 
 <form method="POST" class="usa-html5-map">
@@ -183,7 +187,9 @@ echo "<h2>" . __( 'Configuration of Map Areas', 'freeusa-html5-map' ) . "</h2>";
                 <span class="tipsy-q" original-title="The landing page URL">[?]</span></br>
             </div>
             <span class="title">Info for popup balloon: <span class="tipsy-q" original-title="Info for popup balloon">[?]</span> </span><textarea style="width:100%" class="" rows="10" cols="45" name="info[<?php echo $vals['id']?>]"><?php echo $vals['comment']?></textarea><br />
-            <span class="title">Image URL: </span><input onclick="imageFieldId = this.id; tb_show('Test', 'media-upload.php?type=image&tab=library&TB_iframe=true');" class="" type="text" id="image-<?php echo $vals['id']?>" name="image[<?php echo $vals['id']?>]" value="<?php echo $vals['image']?>" />
+            <span class="title">Image URL: </span>
+            <input onclick="imageFieldId = this.id; tb_show('Test', 'media-upload.php?type=image&tab=library&TB_iframe=true');" class="" type="text" id="image-<?php echo $vals['id']?>" name="image[<?php echo $vals['id']?>]" value="<?php echo $vals['image']?>" />
+            <span style="font-size: 10px; cursor: pointer;" onclick="clearImage(this)">clear</span>
             <span class="tipsy-q" original-title="The path to file of the image to display in a popup">[?]</span><br />
         </div>
         <?php
