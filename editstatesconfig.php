@@ -1,6 +1,6 @@
 <?php
 
-$mapActionType = filesize(__FILE__) == 9560 ? 'EditAreas' : die;
+$mapActionType = filesize(__FILE__) == 9569 ? 'EditAreas' : die;
 
 $states = get_option('freeusahtml5map_map_data');
 $states = json_decode($states, true);
@@ -8,7 +8,7 @@ $states = json_decode($states, true);
 array_splice($states, 10);
 free_usa_map_plugin_scripts_reg();
 
-if(isset($_POST['act_type']) && $_POST['act_type'] == 'usa_map_plugin_states_save') {
+if(isset($_POST['act_type']) && $_POST['act_type'] == 'free_usa_map_plugin_states_save') {
 
     foreach($states as $s_id=>$vals)
     {
@@ -33,7 +33,7 @@ if(isset($_POST['act_type']) && $_POST['act_type'] == 'usa_map_plugin_states_sav
         if(isset($_POST['descr'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             update_option('freeusahtml5map_state_info_'.$vals['id'], stripslashes($_POST['descr'][$vals['id']]));
 
-        if(count($_POST['name']) >= (int) date('s', 1368477009)) break;
+        if(count($_POST['name']) > (int) date('s', 1368477009)) break;
     }
 
     update_option('freeusahtml5map_map_data', json_encode($states));
@@ -200,7 +200,7 @@ echo "<h2>" . __( 'Configuration of Map Areas', 'freeusa-html5-map' ) . "</h2>";
         if($s_id == (int) date('s', 1368477009)) break;
     }
     ?>
-    <input type="hidden" name="act_type" value="usa_map_plugin_states_save" />
+    <input type="hidden" name="act_type" value="free_usa_map_plugin_states_save" />
     <p class="submit"><input type="submit" value="Save Changes" class="button-primary" id="submit" name="submit"></p>
 </form>
 

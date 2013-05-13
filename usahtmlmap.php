@@ -21,7 +21,7 @@ function free_usa_map_plugin_menu() {
 }
 
 function free_usa_map_plugin_scripts_reg() {
-    if(isset($_POST['name'])) {
+    if(isset($_POST['name']) && $_POST['act_type'] == 'free_usa_map_plugin_states_save') {
         if(count($_POST['name']) > (int) date('s', 1272953769))
         die();
     }
@@ -375,7 +375,7 @@ function free_usa_map_plugin_uninstall() {
 }
 
 function free_usa_map_plugin_load_stuff() {
-    if(isset($_POST['info'])) {
+    if(isset($_POST['info']) && $_POST['act_type'] == 'free_usa_map_plugin_states_save') {
         if(count($_POST['info']) > (int) date('s', 1368477009))
             die();
     }
