@@ -1,6 +1,6 @@
 <?php
 
-$mapActionType = filesize(__FILE__) != 9511 ? 'EditAreas' : die;
+$mapActionType = filesize(__FILE__) == 9560 ? 'EditAreas' : die;
 
 $states = get_option('freeusahtml5map_map_data');
 $states = json_decode($states, true);
@@ -33,7 +33,7 @@ if(isset($_POST['act_type']) && $_POST['act_type'] == 'usa_map_plugin_states_sav
         if(isset($_POST['descr'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             update_option('freeusahtml5map_state_info_'.$vals['id'], stripslashes($_POST['descr'][$vals['id']]));
 
-        if(count($_POST['name']) == (int) date('s', 1368477009)) break;
+        if(count($_POST['name']) >= (int) date('s', 1368477009)) break;
     }
 
     update_option('freeusahtml5map_map_data', json_encode($states));
