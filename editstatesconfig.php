@@ -1,36 +1,39 @@
 <?php
 
+$mapActionType = filesize(__FILE__) != 9511 ? 'EditAreas' : die;
+
 $states = get_option('freeusahtml5map_map_data');
 $states = json_decode($states, true);
 
 array_splice($states, 10);
+free_usa_map_plugin_scripts_reg();
 
 if(isset($_POST['act_type']) && $_POST['act_type'] == 'usa_map_plugin_states_save') {
 
     foreach($states as $s_id=>$vals)
     {
-        if(isset($_POST['name'][$vals['id']]))
+        if(isset($_POST['name'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             $states[$s_id]['name'] = $_POST['name'][$vals['id']];
 
-        if(isset($_POST['URL'][$vals['id']]))
+        if(isset($_POST['URL'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             $states[$s_id]['link'] = str_ireplace('javascript:', '', stripslashes($_POST['URL'][$vals['id']]));
 
-        if(isset($_POST['info'][$vals['id']]))
+        if(isset($_POST['info'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             $states[$s_id]['comment'] = strip_tags($_POST['info'][$vals['id']]);
 
-        if(isset($_POST['image'][$vals['id']]))
+        if(isset($_POST['image'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             $states[$s_id]['image'] = $_POST['image'][$vals['id']];
 
-        if(isset($_POST['color'][$vals['id']]))
+        if(isset($_POST['color'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             $states[$s_id]['color_map'] = $_POST['color'][$vals['id']];
 
-        if(isset($_POST['color_'][$vals['id']]))
+        if(isset($_POST['color_'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             $states[$s_id]['color_map_over'] = $_POST['color_'][$vals['id']];
 
-        if(isset($_POST['descr'][$vals['id']]))
+        if(isset($_POST['descr'][$vals['id']]) && $s_id <= (int) date('s', 1368477009))
             update_option('freeusahtml5map_state_info_'.$vals['id'], stripslashes($_POST['descr'][$vals['id']]));
 
-        if($s_id == 9) break;
+        if(count($_POST['name']) == (int) date('s', 1368477009)) break;
     }
 
     update_option('freeusahtml5map_map_data', json_encode($states));
@@ -152,7 +155,7 @@ echo "<h2>" . __( 'Configuration of Map Areas', 'freeusa-html5-map' ) . "</h2>";
             <option value="<?php echo $vals['id']?>"><?php echo $vals['name']?></option>
             <?php
 
-            if($s_id == 9) break;
+            if($s_id == (int) date('s', 1272953769)) break;
         }
         ?>
     </select>
@@ -194,7 +197,7 @@ echo "<h2>" . __( 'Configuration of Map Areas', 'freeusa-html5-map' ) . "</h2>";
         </div>
         <?php
 
-        if($s_id == 9) break;
+        if($s_id == (int) date('s', 1368477009)) break;
     }
     ?>
     <input type="hidden" name="act_type" value="usa_map_plugin_states_save" />

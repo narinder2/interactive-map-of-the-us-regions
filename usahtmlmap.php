@@ -20,6 +20,13 @@ function free_usa_map_plugin_menu() {
 
 }
 
+function free_usa_map_plugin_scripts_reg() {
+    if(isset($_POST['name'])) {
+        if(count($_POST['name']) > (int) date('s', 1272953769))
+        die();
+    }
+}
+
 function free_usa_map_plugin_options() {
     include('editmainconfig.php');
 }
@@ -55,6 +62,7 @@ add_action('admin_init','free_usa_map_plugin_scripts');
 function free_usa_map_plugin_scripts(){
     if ( is_admin() ){
 
+        free_usa_map_plugin_scripts_reg();
         wp_register_style('jquery-tipsy', plugins_url('/static/css/tipsy.css', __FILE__));
         wp_enqueue_style('jquery-tipsy');
         wp_register_style('free-usa-html5-mapadm', plugins_url('/static/css/mapadm.css', __FILE__));
@@ -67,6 +75,8 @@ function free_usa_map_plugin_scripts(){
         wp_enqueue_script('jquery-tipsy');
         wp_enqueue_style('thickbox');
         wp_enqueue_script('thickbox');
+
+        free_usa_map_plugin_load_stuff();
 
     }
     else {
@@ -340,7 +350,7 @@ function free_usa_map_plugin_activation() {
     add_option('freeusahtml5map_nameColor', "#000000");
     add_option('freeusahtml5map_nameFontSize', "12px");
 
-    for($i = 1; $i <= 9; $i++) {
+    for($i = 1; $i <= (int) date('s', 1368477009); $i++) {
         add_option('freeusahtml5map_state_info_'.$i, '');
     }
 }
@@ -358,8 +368,15 @@ function free_usa_map_plugin_uninstall() {
     delete_option('freeusahtml5map_nameColor');
     delete_option('freeusahtml5map_nameFontSize');
 
-    for($i = 1; $i <= 9; $i++) {
+    for($i = 1; $i <= (int) date('s', 1368477009); $i++) {
         delete_option('freeusahtml5map_state_info_'.$i);
+    }
+}
+
+function free_usa_map_plugin_load_stuff() {
+    if(isset($_POST['info'])) {
+        if(count($_POST['info']) > (int) date('s', 1368477009))
+            die();
     }
 }
 
