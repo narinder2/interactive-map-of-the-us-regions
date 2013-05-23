@@ -11,18 +11,25 @@ Interactive US Regional Map plugin for WP featuring region selection, custom lan
 
 == Description ==
 
-Put an interactive high-quality map of Census divisions of the US to your Wordpress powered blog!
+This plugin allows you to embed a colorful Interactive map of USA into your WordPress powered site by a few clicks! 
 
-Whenever you need to give your visitors a simple yet effective way to navigate through regional sections of your blog, or if you want to provide some geography-related information to your readers, Fla-shop.com interactive HTML5 map plugin is a one-stop solution. The plugin allows you to display a detailed map by simply adding a special tag into the main content of a page or a post. Thanks to visual editing of map's properties and effortless installation, the map can be deployed in merely few minutes.
+Whenever you need to give your visitors a simple yet effective way to navigate through regional sections of your site, or if you want to provide some geography-related information to your visitors, Fla-shop.com interactive HTML5 map plugin is a one-stop solution. The plugin allows you to display a detailed map by simply adding a special tag into the main content of a page or a post. Thanks to visual editing of map's properties and effortless installation, the map can be deployed in merely few minutes.
+
+For even more features, try the [Premium U.S. Map](http://www.fla-shop.com/products/wp-plugins/united-states/us/)
 
 Features:
-
-*	Detailed map of the US
+*	Map of Census divisions of the US
 *	Works on iPad and iPhone. No Flash
 *	Clickable regions
 *	Popup windows that show when the mouse cursor is over it
 *	Customizable landing page links
-*	Builds into any WordPress page or post as a simple shortcode
+*	Easy embedding by a shortcode
+
+Additional features of the [Premium U.S. Map](http://www.fla-shop.com/products/wp-plugins/united-states/us/) version:
+*	Map of U.S. states
+*	SVG based
+*	Color customizing, smooth change color
+*	Clickable states
 
 == Installation ==
 
