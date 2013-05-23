@@ -18,6 +18,7 @@ Whenever you need to give your visitors a simple yet effective way to navigate t
 For even more features, try the [Premium U.S. Map](http://www.fla-shop.com/products/wp-plugins/united-states/us/)
 
 Features:
+
 *	Map of Census divisions of the US
 *	Works on iPad and iPhone. No Flash
 *	Clickable regions
@@ -26,6 +27,7 @@ Features:
 *	Easy embedding by a shortcode
 
 Additional features of the [Premium U.S. Map](http://www.fla-shop.com/products/wp-plugins/united-states/us/) version:
+
 *	Map of U.S. states
 *	SVG based
 *	Color customizing, smooth change color
