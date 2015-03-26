@@ -58,7 +58,7 @@ function free_usa_map_plugin_view() {
 <br>
 <h2>Try our PREMIUM plugins</h2>
 
-Improve your website with premium map plugins. Get a 25% discount with coupon code <strong>25maps</strong>
+Improve your website with premium map plugins. Get a 15% discount with coupon code <strong>15WPMAPS</strong>
 <br><br>
 Get two maps in one: a map of the US plus a detailed city view map powered by Google Maps.
 <br><br>
