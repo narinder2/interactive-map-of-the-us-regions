@@ -3,7 +3,7 @@
 Plugin Name: Interactive Map of the US Regions
 Plugin URI: http://fla-shop.com
 Description: Free Interactive US Map plugin for WordPress featuring region selection, font adjustments, custom landing pages and popup windows. To get started: 1) Click the "Activate" link to the left of this description, 2) Edit the map settings, and 3) After that, insert the shortcode <strong>[freeusregionmap01]</strong> into the text of a page or a post where you want the map to be.
-Version: 1.0
+Version: 1.1
 Author: Fla-shop.com
 Author URI: http://fla-shop.com
 License: GPLv2 or later
@@ -120,7 +120,7 @@ function free_usa_map_plugin_content($content) {
         }
         else {
             $freeMapDataJ[$k]['link'] = 'href="'.$freeMapDataJ[$k]['link'].'"';
-            $freeMapDataJ[$k]['target'] = '_blank';
+            $freeMapDataJ[$k]['target'] = '_top';
         }
 
     }
@@ -284,7 +284,7 @@ function free_usa_map_plugin_content($content) {
             <div style=\"position: relative\">
                 <div id=\"toolTip\"><table id=\"ToolTipFrame\" class=\"ToolTipFrameClass\"><tr id=\"ToolTipFrame\" class=\"ToolTipFrameClass\" valign=\"top\"><td id=\"toolTipImage\"></td><td id=\"toolTipComment\" class=\"toolTipCommentClass\"></td></tr></table><div id=\"toolTipName\"></div></div>
                 <div style=\"width: 530px; height: 365px; background-image: url('{$dir}img/us.png')\"></div>
-                <img style=\"position: absolute; top: 0; left: 0; z-index: 2;\" width=\"530\" height=\"365\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" usemap=\"#us_imageready_Map\" border=0 />
+                <img style=\"position: absolute; top: 0; left: 0; z-index: 2; box-shadow: none !important;\" width=\"530\" height=\"365\" src=\"data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7\" usemap=\"#us_imageready_Map\" border=0 />
                 <map onmousemove='moveToolTipFree(event);' name=\"us_imageready_Map\">
                     <area onmouseover=\"usaMapIn(1); \" onmouseout=\"usaMapOut();\" shape=\"poly\" coords=\"455,61, 453,67, 453,80, 452,85, 449,86, 446,88, 446,90, 443,91, 440,92, 433,94, 434,102, 436,107, 438,110, 439,125, 440,134, 449,132, 458,127, 462,125, 467,123, 466,121, 462,119, 459,116, 460,112, 458,110, 460,106, 461,101, 480,85, 480,79, 477,79, 472,74, 469,64, 468,61, 464,59, 461,60,
                     460,62\" target='{$freeMapDataJ['st1']['target']}' {$freeMapDataJ['st1']['link']}>

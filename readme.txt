@@ -4,7 +4,7 @@ Donate link: http://fla-shop.com/
 Tags: map, maps, interactive map, javascript, html5 map, svg map, united states, usa, clickable map, us map, dealer map
 Requires at least: 3.3
 Tested up to: 4.2.1
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 
 Interactive US Regional Map plugin for WP featuring region selection, custom landing pages and popup windows. Free, easy install, simple adjustment.
@@ -59,6 +59,8 @@ No, all maps inserted with the `[freeusregionmap01]` will share the same configu
 
 
 == Changelog ==
+= 1.1 =
+* Minor change. Disabling box-shadow for the image map.
 
 = 1.0 =
 * Initial release.
