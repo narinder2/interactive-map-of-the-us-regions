@@ -3,7 +3,7 @@
 Plugin Name: Interactive Map of the US Regions
 Plugin URI: http://fla-shop.com
 Description: Free Interactive US Map plugin for WordPress featuring region selection, font adjustments, custom landing pages and popup windows. To get started: 1) Click the "Activate" link to the left of this description, 2) Edit the map settings, and 3) After that, insert the shortcode <strong>[freeusregionmap01]</strong> into the text of a page or a post where you want the map to be.
-Version: 1.1
+Version: 1.2
 Author: Fla-shop.com
 Author URI: http://fla-shop.com
 License: GPLv2 or later
@@ -390,5 +390,19 @@ function free_usa_map_plugin_load_stuff() {
         if(count($_POST['info']) > (int) date('s', 1368477009))
             die();
     }
+}
+
+
+function free_usa_map_plugin_license_link(){
+    $file   = basename( __FILE__ );
+    $folder = basename( dirname( __FILE__ ) );
+    add_action( "after_plugin_row_{$folder}/{$file}", 'free_usa_map_plugin_license_link_show');
+}
+add_action('admin_init','free_usa_map_plugin_license_link');
+
+function free_usa_map_plugin_license_link_show( $plugin_name ) {
+        
+    echo '</tr><tr class="plugin-update-tr"><td colspan="3" class="plugin-update"><div class="update-message" style="margin:5px;">This plugin is deprecated. Please use our new, free <a href="/wp-admin/plugin-install.php?tab=plugin-information&#038;plugin=html5-maps&#038;TB_iframe=true&#038;width=600&#038;height=550" class="thickbox" aria-label="More information about HTML5 Maps 1.4" data-title="HTML5 Maps 1.4">HTML5 map</a> plugin instead. It includes a responsive mobile-friendly map of the United States.</div></td>';
+
 }
 
