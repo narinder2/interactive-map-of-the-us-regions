@@ -3,7 +3,7 @@ Contributors: html5maps
 Donate link: http://fla-shop.com/
 Tags: map, maps, interactive map, javascript, html5 map, svg map, united states, usa, clickable map, us map, dealer map
 Requires at least: 3.3
-Tested up to: 4.3
+Tested up to: 4.3.1
 Stable tag: 1.2
 License: GPLv2 or later
 
